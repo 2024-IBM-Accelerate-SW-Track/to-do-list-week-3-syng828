@@ -1,7 +1,6 @@
 import { render, screen, fireEvent} from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import App from './App';
-import { red } from '@mui/material/colors';
 
 let container = null;
 beforeEach(() => {
@@ -17,7 +16,7 @@ afterEach(() => {
   container = null;
 });
 
-test('test that App component doesn\'t add duplicates', () => {
+test('test that App component doesn\'t render dupicate Task', () => {
   render(<App />);
   const inputTask = screen.getByRole('textbox', {name: /Add New Item/i});
   const inputDate = screen.getByPlaceholderText("mm/dd/yyyy");
