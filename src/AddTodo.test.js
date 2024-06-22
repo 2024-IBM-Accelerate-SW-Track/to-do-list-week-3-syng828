@@ -17,7 +17,7 @@ afterEach(() => {
   container = null;
 });
 
-test('test that App component doesn\'t add duplicates', () => {
+test('test that App component doesn\'t render dupicate Task', () => {
   render(<App />);
   const inputTask = screen.getByRole('textbox', {name: /Add New Item/i});
   const inputDate = screen.getByPlaceholderText("mm/dd/yyyy");
